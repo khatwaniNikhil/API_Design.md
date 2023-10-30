@@ -1,6 +1,7 @@
-top http headers
-https://pentest-tools.com/blog/essential-http-security-headers
-https://stackoverflow.com/questions/30062024/why-is-the-http-header-for-authentication-called-authorization
+# top http headers
+1. https://pentest-tools.com/blog/essential-http-security-headers
+2. https://stackoverflow.com/questions/30062024/why-is-the-http-header-for-authentication-called-authorization
+3. https://kennethlange.com/rest-api-checklist/
 
 1. WWW-Authenticate header
 	server replying to client - go first authenticate yourself(may be with thirdparty) via one of the provided schemes
@@ -34,3 +35,7 @@ This header is used to protect the user against ClickJacking attacks by forbiddi
 "same-origin" -  This will allow the page to be loaded in a frame only if the origin frame is the same
 		 i.e. A page on www.site.com will load in a frame only if the parent page on which the frame is being loaded has the same origin (www.site.com)
 "allow-from uri" - The frame can only be displayed in a frame on the specified domain/origin.
+
+6. Cache-Control header
+example: Cache-Control: max-age=3600
+state if the response can be cached, or not. If yes, state for how long it can be cached
